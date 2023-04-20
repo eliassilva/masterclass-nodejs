@@ -2,8 +2,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 
-// eslint-disable-next-line import/extensions
-import { send404 } from './send404.js';
+import { send404 } from './send404';
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET') {
