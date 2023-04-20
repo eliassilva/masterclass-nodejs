@@ -2,11 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-function send404(res) {
-  res.writeHead(404, { 'Content-Type': 'text/plain' });
-  res.write('Error 404: Resource not found.');
-  res.end();
-}
+const { send404 } = require('./send404');
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET') {
