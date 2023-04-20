@@ -1,8 +1,9 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
 
-const { send404 } = require('./send404');
+// eslint-disable-next-line import/extensions
+import { send404 } from './send404.js';
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET') {
